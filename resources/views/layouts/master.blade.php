@@ -4,62 +4,29 @@
 *
 --}}
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
-
-<!-- -index-1 * 08:46:16 GMT -->
+<html lang="uk">
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <meta name='csrf-token' content="{{ csrf_token() }}">
+ 
     <!-- SITE META -->
     <title>Techmag | Responsive Magazine Site Template</title>
     <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    @include('layouts.inc.metalink.sitemeta')
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/apple-touch-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/apple-touch-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/apple-touch-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/apple-touch-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/apple-touch-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/apple-touch-icon-152x152.png') }}">
-
+    <link rel="shortcut icon" href="{{ asset('/images/favicon.ico') }}" type="image/x-icon">
+    @include('layouts.inc.metalink.favicon')
     <!-- TEMPLATE STYLES -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-
+    @include('layouts.inc.metalink.styles')
     <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}"">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
 
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
+  
 </head>
 <body class="header2">
-
-      <div class="left-menu hidden-sm hidden-md hidden-xs">
-        <ul class="dm-social">
-            <li class="facebookbg"><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="right" title="Facebook">Facebook</a></li>
-            <li class="googlebg"><a href="#" class="fa fa-google-plus" data-toggle="tooltip" data-placement="right" title="Google+">Google+</a></li>
-            <li class="twitterbg"><a href="#" class="fa fa-twitter" data-toggle="tooltip" data-placement="right" title="Twitter">Twitter</a></li>
-            <li class="pinterestbg"><a href="#" class="fa fa-pinterest" data-toggle="tooltip" data-placement="right" title="Pinterest">Pinterest</a></li>
-            <li class="linkedinbg"><a href="#" class="fa fa-linkedin" data-toggle="tooltip" data-placement="right" title="Linkedin">Linkedin</a></li>
-            <li class="rssbg"><a href="#" class="fa fa-rss" data-toggle="tooltip" data-placement="right" title="RSS">RSS</a></li>
-            <li class="share"><a href="#" class="fa fa-share-alt" data-toggle="tooltip" data-placement="right" title="91k Share"></a></li>
-        </ul>
-      </div>
+    <!-- Left side social link -->
+    @include('layouts.inc.social.leftsocial')
 
     <!-- START SITE -->
 
@@ -496,7 +463,13 @@
                     <div class="col-md-3 col-sm-12">
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
                     </div><!-- end col -->
-                    <div class="col-md-9 col-sm-12">
+                    <div class="col-md-3 col-sm-12 text-justify" style="padding: 0px 10px 0px 0px">
+                        <em class="small text-muted">
+                            <b id="typed"></b></em>
+                        <footer class="text-right text-muted small"><em id="author"></em></footer>
+                        
+                    </div>
+                    <div class="col-md-6 col-sm-12">
                         <div class="ads-widget clearfix">
                             <a href="#"><img src="upload/banner_03.jpg" alt="" class="img-responsive"></a>
                         </div><!-- end ads-widget -->
@@ -625,12 +598,7 @@
 
     </div><!-- end wrapper -->
     <!-- END SITE -->
-
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <script src="{{ asset('js/plugins.js') }}"></script>
-  
+    <!-- TEMPLATE SCRIPTS -->
+    @include('layouts.inc.metalink.scripts')
 </body>
-
-<!-- -index-1 * 08:46:16 GMT -->
 </html>
