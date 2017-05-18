@@ -9,4 +9,3 @@
         <li class="share"><a href="#" class="fa fa-share-alt" data-toggle="tooltip" data-placement="right" title="91k Share"></a></li>
     </ul>
 </div>
-
