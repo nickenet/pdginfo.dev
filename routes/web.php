@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 //Admin
-Route::get('admin' , 'AdminController')->name('admin');
+Route::get('/admin' , 'AdminController')->name('admin');
 
 //Auth
 Auth::routes();
