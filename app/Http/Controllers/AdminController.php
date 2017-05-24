@@ -14,8 +14,9 @@ class AdminController extends Controller
         $this->middleware('admin');
     }
 
-    public function __invoke()
+    public function __invoke(Request $request)
     {
+        dump($request->session()->all());
         echo "Test AdminController!";
     }
 }

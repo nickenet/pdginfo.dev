@@ -31,7 +31,8 @@ class User extends Authenticatable
      * is admin
      */
     public function isAdmin()
-    {
-        return true; // поле is_admin в таблице users
+    {   
+        
+        return $this->is_admin; // поле is_admin в таблице users
     }
 }

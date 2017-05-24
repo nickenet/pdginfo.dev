@@ -18,6 +18,7 @@ class IsAdmin
     {
        if ( Auth::check() && Auth::user()->isAdmin()==true )
         {
+            
             echo "Test AdminMiblware!";
             return $next($request);
         }
